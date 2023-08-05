@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B637A99F2A7D26C900C73812"
-               BuildableName = "Rel.app"
-               BlueprintName = "Rel"
+               BlueprintIdentifier = "B6E349542A7E8C5F00A3148D"
+               BuildableName = "Rel-stg.app"
+               BlueprintName = "Rel-stg"
                ReferencedContainer = "container:Rel.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B637A99F2A7D26C900C73812"
-            BuildableName = "Rel.app"
-            BlueprintName = "Rel"
+            BlueprintIdentifier = "B6E349542A7E8C5F00A3148D"
+            BuildableName = "Rel-stg.app"
+            BlueprintName = "Rel-stg"
             ReferencedContainer = "container:Rel.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B637A99F2A7D26C900C73812"
-            BuildableName = "Rel.app"
-            BlueprintName = "Rel"
+            BlueprintIdentifier = "B6E349542A7E8C5F00A3148D"
+            BuildableName = "Rel-stg.app"
+            BlueprintName = "Rel-stg"
             ReferencedContainer = "container:Rel.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

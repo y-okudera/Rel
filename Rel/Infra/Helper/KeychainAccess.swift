@@ -73,3 +73,46 @@ extension KeychainAccess {
         return String(data: data, encoding: .utf8)
     }
 }
+
+extension KeychainAccess {
+
+    static func getAllKeyChainItemsOfClass(
+        _ secClass: String = kSecClassGenericPassword as String
+    ) -> [(account: String, service: String, value: String)] {
+        let query: [String: Any] = [
+            kSecClass as String: secClass,
+            kSecReturnData as String: kCFBooleanTrue!,
+            kSecReturnAttributes as String: kCFBooleanTrue!,
+            kSecReturnRef as String: kCFBooleanTrue!,
+            kSecMatchLimit as String: kSecMatchLimitAll
+        ]
+
+        var result: AnyObject?
+
+        let lastResultCode = withUnsafeMutablePointer(to: &result) {
+            SecItemCopyMatching(query as CFDictionary, UnsafeMutablePointer($0))
+        }
+
+        var values = [(account: String, service: String, value: String)]()
+        if lastResultCode == noErr {
+            guard let array = result as? Array<Dictionary<String, Any>> else {
+                return []
+            }
+
+            for item in array {
+                guard let account = item[kSecAttrAccount as String] as? String,
+                      let service = item[kSecAttrService as String] as? String,
+                      let value = item[kSecValueData as String] as? Data else {
+                    continue
+                }
+                if service.hasSuffix("encryptionKey") && account == "realm" {
+                    values.append((account: account, service: service, value: value.map { String(format: "%.2hhx", $0) }.joined()))
+                } else {
+                    values.append((account: account, service: service, value: String(data: value, encoding:.utf8) ?? ""))
+                }
+            }
+        }
+
+        return values
+    }
+}

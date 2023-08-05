@@ -1,15 +1,14 @@
 //
-//  RelTests.swift
-//  RelTests
+//  Rel_devTests.swift
+//  Rel-devTests
 //
-//  Created by Yuki Okudera on 2023/08/04.
+//  Created by Yuki Okudera on 2023/08/05.
 //
 
-import RealmSwift
 import XCTest
-@testable import Rel
+@testable import Rel_dev
 
-final class RelTests: XCTestCase {
+final class Rel_devTests: XCTestCase {
 
     var realmAccess: RealmAccess!
 
@@ -79,4 +78,5 @@ final class RelTests: XCTestCase {
 
         wait(for: [exp], timeout: 60.0)
     }
+
 }

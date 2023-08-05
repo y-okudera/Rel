@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B637A99F2A7D26C900C73812"
-               BuildableName = "Rel.app"
-               BlueprintName = "Rel"
+               BlueprintIdentifier = "B6E3493C2A7E8C1900A3148D"
+               BuildableName = "Rel-dev.app"
+               BlueprintName = "Rel-dev"
+               ReferencedContainer = "container:Rel.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B6E3498B2A7E8D8D00A3148D"
+               BuildableName = "Rel-devTests.xctest"
+               BlueprintName = "Rel-devTests"
                ReferencedContainer = "container:Rel.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,8 +40,19 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B6E3498B2A7E8D8D00A3148D"
+               BuildableName = "Rel-devTests.xctest"
+               BlueprintName = "Rel-devTests"
+               ReferencedContainer = "container:Rel.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -44,9 +69,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B637A99F2A7D26C900C73812"
-            BuildableName = "Rel.app"
-            BlueprintName = "Rel"
+            BlueprintIdentifier = "B6E3493C2A7E8C1900A3148D"
+            BuildableName = "Rel-dev.app"
+            BlueprintName = "Rel-dev"
             ReferencedContainer = "container:Rel.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +86,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B637A99F2A7D26C900C73812"
-            BuildableName = "Rel.app"
-            BlueprintName = "Rel"
+            BlueprintIdentifier = "B6E3493C2A7E8C1900A3148D"
+            BuildableName = "Rel-dev.app"
+            BlueprintName = "Rel-dev"
             ReferencedContainer = "container:Rel.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

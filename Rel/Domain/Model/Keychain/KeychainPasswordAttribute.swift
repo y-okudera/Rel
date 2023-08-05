@@ -11,10 +11,13 @@ enum KeychainPasswordAttribute {
     case realmEncryptionKey
 
     func service() -> String {
-        switch self {
-        case .realmEncryptionKey:
-            return "encryptionKey"
-        }
+        let service = {
+            switch self {
+            case .realmEncryptionKey:
+                return "encryptionKey"
+            }
+        }()
+        return Environment.keychainPrefix + service
     }
 
     func account() -> String {

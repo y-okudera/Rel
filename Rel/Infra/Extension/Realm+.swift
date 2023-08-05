@@ -22,7 +22,7 @@ extension Realm {
     
     static let encrypted: Self = {
         let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-        let realmFileUrl = documentDirectory?.appendingPathComponent("encrypted.realm")
+        let realmFileUrl = documentDirectory?.appendingPathComponent(Environment.realmFileName)
         print("realmFileUrl -> \(realmFileUrl?.absoluteString ?? "")")
         let config = Realm.Configuration(fileURL: realmFileUrl, encryptionKey: realmEncryptionKey)
         do {
@@ -36,28 +36,27 @@ extension Realm {
     
     private static let realmEncryptionKey: Data = {
         if let encryptionKey = KeychainAccess.read(passwordAttr: .realmEncryptionKey) {
-            print("キーチェーンから取得")
-            print("Realm encryptionKey -> " + encryptionKey.map { String(format: "%.2hhx", $0) }.joined())
+            print("Realm encryptionKeyをキーチェーンから取得")
             return encryptionKey
         } else {
-            
-            let encryptionKey: Data = {
-                var key = Data(count: 64)
-                _ = key.withUnsafeMutableBytes { mutableRawBufferPointer -> Int32 in
-                    let bufferPointer = mutableRawBufferPointer.bindMemory(to: UInt8.self)
-                    if let address = bufferPointer.baseAddress{
-                        return SecRandomCopyBytes(kSecRandomDefault, 64, address)
-                    }
-                    return 0
-                }
-                return key
-            }()
-            let result = KeychainAccess.write(data: encryptionKey, passwordAttr: .realmEncryptionKey)
-            print("キーチェーン保存: \(result ? "成功" : "失敗")")
-            print("Realm encryptionKey -> " + encryptionKey.map { String(format: "%.2hhx", $0) }.joined())
+            let encryptionKey = generateRealmEncryptionKey()
+            let writeResult = KeychainAccess.write(data: encryptionKey, passwordAttr: .realmEncryptionKey)
+            print("Realm encryptionKeyをキーチェーンに保存: \(writeResult ? "成功" : "失敗")")
             return encryptionKey
         }
     }()
+
+    private static func generateRealmEncryptionKey() -> Data {
+        var encryptionKey = Data(count: 64)
+        _ = encryptionKey.withUnsafeMutableBytes { mutableRawBufferPointer -> Int32 in
+            let bufferPointer = mutableRawBufferPointer.bindMemory(to: UInt8.self)
+            if let address = bufferPointer.baseAddress{
+                return SecRandomCopyBytes(kSecRandomDefault, 64, address)
+            }
+            return 0
+        }
+        return encryptionKey
+    }
 }
 
 extension Realm {
