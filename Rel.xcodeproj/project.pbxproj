@@ -16,6 +16,14 @@
 		B637A9B52A7D26CA00C73812 /* RelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B637A9B42A7D26CA00C73812 /* RelTests.swift */; };
 		B637A9BF2A7D26CA00C73812 /* RelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B637A9BE2A7D26CA00C73812 /* RelUITests.swift */; };
 		B637A9C12A7D26CA00C73812 /* RelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B637A9C02A7D26CA00C73812 /* RelUITestsLaunchTests.swift */; };
+		B6F71ABD2A7D3A07007EE493 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71ABC2A7D3A07007EE493 /* RealmHelper.swift */; };
+		B6F71AC32A7D4869007EE493 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AC22A7D4869007EE493 /* Title.swift */; };
+		B6F71AC82A7D4AFF007EE493 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AC72A7D4AFF007EE493 /* Realm+.swift */; };
+		B6F71ACB2A7D55D9007EE493 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71ACA2A7D55D9007EE493 /* KeychainHelper.swift */; };
+		B6F71ACD2A7D5905007EE493 /* KeychainPasswordAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71ACC2A7D5905007EE493 /* KeychainPasswordAttribute.swift */; };
+		B6F71AD32A7D61EB007EE493 /* ExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AD22A7D61EB007EE493 /* ExceptionHandler.m */; };
+		B6F71AD52A7D6224007EE493 /* ExceptionCatchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AD42A7D6224007EE493 /* ExceptionCatchable.swift */; };
+		B6F71AD72A7D6826007EE493 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = B6F71AD62A7D6826007EE493 /* .gitkeep */; };
 		D21D9517ED94B509C1810A16 /* Pods_RelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7CE0F7EA53A28FF3D6DEB2 /* Pods_RelTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +60,16 @@
 		B637A9BA2A7D26CA00C73812 /* RelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B637A9BE2A7D26CA00C73812 /* RelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelUITests.swift; sourceTree = "<group>"; };
 		B637A9C02A7D26CA00C73812 /* RelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B6F71ABC2A7D3A07007EE493 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		B6F71AC22A7D4869007EE493 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		B6F71AC72A7D4AFF007EE493 /* Realm+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
+		B6F71ACA2A7D55D9007EE493 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		B6F71ACC2A7D5905007EE493 /* KeychainPasswordAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainPasswordAttribute.swift; sourceTree = "<group>"; };
+		B6F71AD02A7D61EB007EE493 /* Rel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rel-Bridging-Header.h"; sourceTree = "<group>"; };
+		B6F71AD12A7D61EB007EE493 /* ExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExceptionHandler.h; sourceTree = "<group>"; };
+		B6F71AD22A7D61EB007EE493 /* ExceptionHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExceptionHandler.m; sourceTree = "<group>"; };
+		B6F71AD42A7D6224007EE493 /* ExceptionCatchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExceptionCatchable.swift; sourceTree = "<group>"; };
+		B6F71AD62A7D6826007EE493 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		B9CE8BFC5C9F8CF308440212 /* Pods-RelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelTests.release.xcconfig"; path = "Target Support Files/Pods-RelTests/Pods-RelTests.release.xcconfig"; sourceTree = "<group>"; };
 		D2C6CAE939781DD0741C3DAE /* Pods-Rel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rel.release.xcconfig"; path = "Target Support Files/Pods-Rel/Pods-Rel.release.xcconfig"; sourceTree = "<group>"; };
 		D71C1071FE0E4453FA1BEE81 /* Pods-Rel-RelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rel-RelUITests.debug.xcconfig"; path = "Target Support Files/Pods-Rel-RelUITests/Pods-Rel-RelUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,7 +114,6 @@
 				2BFF1F14C7A1B4CF46C240B4 /* Pods-RelTests.debug.xcconfig */,
 				B9CE8BFC5C9F8CF308440212 /* Pods-RelTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -135,10 +152,10 @@
 		B637A9A22A7D26C900C73812 /* Rel */ = {
 			isa = PBXGroup;
 			children = (
-				B637A9A32A7D26C900C73812 /* RelApp.swift */,
+				B6F71ACE2A7D61B6007EE493 /* App */,
+				B6F71ABE2A7D43F1007EE493 /* Domain */,
+				B6F71AB92A7D36A1007EE493 /* Infra */,
 				B637A9A52A7D26C900C73812 /* ContentView.swift */,
-				B637A9A72A7D26CA00C73812 /* Assets.xcassets */,
-				B637A9A92A7D26CA00C73812 /* Preview Content */,
 			);
 			path = Rel;
 			sourceTree = "<group>";
@@ -166,6 +183,96 @@
 				B637A9C02A7D26CA00C73812 /* RelUITestsLaunchTests.swift */,
 			);
 			path = RelUITests;
+			sourceTree = "<group>";
+		};
+		B6F71AB92A7D36A1007EE493 /* Infra */ = {
+			isa = PBXGroup;
+			children = (
+				B6F71AC62A7D4AE9007EE493 /* Extension */,
+				B6F71ABB2A7D39F0007EE493 /* Helper */,
+				B6F71ABA2A7D36C0007EE493 /* Repository */,
+			);
+			path = Infra;
+			sourceTree = "<group>";
+		};
+		B6F71ABA2A7D36C0007EE493 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B6F71AD62A7D6826007EE493 /* .gitkeep */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B6F71ABB2A7D39F0007EE493 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B6F71ABC2A7D3A07007EE493 /* RealmHelper.swift */,
+				B6F71ACA2A7D55D9007EE493 /* KeychainHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B6F71ABE2A7D43F1007EE493 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B6F71ABF2A7D43FA007EE493 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B6F71ABF2A7D43FA007EE493 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6F71AC92A7D55C5007EE493 /* Keychain */,
+				B6F71AC02A7D4843007EE493 /* Realm */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B6F71AC02A7D4843007EE493 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				B6F71AC22A7D4869007EE493 /* Title.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		B6F71AC62A7D4AE9007EE493 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B6F71AC72A7D4AFF007EE493 /* Realm+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B6F71AC92A7D55C5007EE493 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				B6F71ACC2A7D5905007EE493 /* KeychainPasswordAttribute.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		B6F71ACE2A7D61B6007EE493 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B637A9A72A7D26CA00C73812 /* Assets.xcassets */,
+				B6F71ACF2A7D61BF007EE493 /* ExceptionHandler */,
+				B637A9A92A7D26CA00C73812 /* Preview Content */,
+				B6F71AD02A7D61EB007EE493 /* Rel-Bridging-Header.h */,
+				B637A9A32A7D26C900C73812 /* RelApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B6F71ACF2A7D61BF007EE493 /* ExceptionHandler */ = {
+			isa = PBXGroup;
+			children = (
+				B6F71AD12A7D61EB007EE493 /* ExceptionHandler.h */,
+				B6F71AD22A7D61EB007EE493 /* ExceptionHandler.m */,
+				B6F71AD42A7D6224007EE493 /* ExceptionCatchable.swift */,
+			);
+			path = ExceptionHandler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +348,7 @@
 				TargetAttributes = {
 					B637A99F2A7D26C900C73812 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					B637A9AF2A7D26CA00C73812 = {
 						CreatedOnToolsVersion = 14.2;
@@ -277,6 +385,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F71AD72A7D6826007EE493 /* .gitkeep in Resources */,
 				B637A9AB2A7D26CA00C73812 /* Preview Assets.xcassets in Resources */,
 				B637A9A82A7D26CA00C73812 /* Assets.xcassets in Resources */,
 			);
@@ -406,8 +515,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F71AD52A7D6224007EE493 /* ExceptionCatchable.swift in Sources */,
+				B6F71ACD2A7D5905007EE493 /* KeychainPasswordAttribute.swift in Sources */,
+				B6F71AD32A7D61EB007EE493 /* ExceptionHandler.m in Sources */,
+				B6F71AC32A7D4869007EE493 /* Title.swift in Sources */,
 				B637A9A62A7D26C900C73812 /* ContentView.swift in Sources */,
+				B6F71ABD2A7D3A07007EE493 /* RealmHelper.swift in Sources */,
+				B6F71ACB2A7D55D9007EE493 /* KeychainHelper.swift in Sources */,
 				B637A9A42A7D26C900C73812 /* RelApp.swift in Sources */,
+				B6F71AC82A7D4AFF007EE493 /* Realm+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,9 +680,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Rel/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Rel/App/Preview Content\"";
 				DEVELOPMENT_TEAM = B8PR34D6DP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -584,6 +701,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.yuoku.Rel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Rel/App/Rel-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -595,9 +714,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Rel/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Rel/App/Preview Content\"";
 				DEVELOPMENT_TEAM = B8PR34D6DP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -615,6 +735,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.yuoku.Rel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Rel/App/Rel-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
