@@ -11,25 +11,27 @@ import XCTest
 
 final class RelTests: XCTestCase {
 
-    let realmHelper = RealmHelper(realm: .inMemory)
+    var realmHelper: RealmHelper!
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        realmHelper = RealmHelper(realm: .inMemory)
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        realmHelper = nil
     }
 
     func testRealmHelpers() throws {
         let t = Title(id: 1, name: "test1", isOpened: true)
         realmHelper.save(object: t) { error in
-            print("err1: \(error.localizedDescription)")
+            XCTFail(error.localizedDescription)
         }
 
         let tt = Title(id: 2, name: "test2", isOpened: true)
         realmHelper.save(object: tt) { error in
-            print("err2: \(error.localizedDescription)")
+            XCTFail(error.localizedDescription)
         }
 
         let fetchResult = realmHelper.fetch(objectType: Title.self)
@@ -50,7 +52,7 @@ final class RelTests: XCTestCase {
 
         // Unmanaged objects -> Managed objects
         realmHelper.update(objects: data) { error in
-            print("err2: \(error.localizedDescription)")
+            XCTFail(error.localizedDescription)
         }
 
         for i in 0..<count {
@@ -71,7 +73,7 @@ final class RelTests: XCTestCase {
                 }
                 exp.fulfill()
             } errorHandler: { error in
-                print("e: \(error.localizedDescription)")
+                XCTFail(error.localizedDescription)
             }
         }
 

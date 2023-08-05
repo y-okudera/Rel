@@ -36,7 +36,9 @@ final class KeychainHelper {
             SecItemUpdate(query, [kSecValueData as String: data] as CFDictionary)
             return true
         default:
+#if DEBUG
             print("Failed to save data to keychain")
+#endif
             return false
         }
     }

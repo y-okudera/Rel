@@ -21,7 +21,12 @@ extension Realm {
     }()
     
     static let encrypted: Self = {
-        let config = Realm.Configuration(encryptionKey: realmEncryptionKey)
+        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let realmFileUrl = documentDirectory?.appendingPathComponent("encrypted.realm")
+#if DEBUG
+        print("realmFileUrl -> \(realmFileUrl?.absoluteString ?? "")")
+#endif
+        let config = Realm.Configuration(fileURL: realmFileUrl, encryptionKey: realmEncryptionKey)
         do {
             let realm = try Realm(configuration: config)
             return realm
@@ -35,7 +40,6 @@ extension Realm {
         if let encryptionKey = KeychainHelper.shared.read(passwordAttr: .realmEncryptionKey) {
 #if DEBUG
             print("キーチェーンから取得")
-            print("HomeDirectory -> " + NSHomeDirectory())
             print("Realm encryptionKey -> " + encryptionKey.map { String(format: "%.2hhx", $0) }.joined())
 #endif
             return encryptionKey
@@ -55,7 +59,6 @@ extension Realm {
             let result = KeychainHelper.shared.save(encryptionKey, passwordAttr: .realmEncryptionKey)
 #if DEBUG
             print("キーチェーン保存: \(result ? "成功" : "失敗")")
-            print("HomeDirectory -> " + NSHomeDirectory())
             print("Realm encryptionKey -> " + encryptionKey.map { String(format: "%.2hhx", $0) }.joined())
 #endif
             return encryptionKey
