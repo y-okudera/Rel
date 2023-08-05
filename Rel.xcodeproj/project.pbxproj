@@ -16,10 +16,11 @@
 		B637A9B52A7D26CA00C73812 /* RelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B637A9B42A7D26CA00C73812 /* RelTests.swift */; };
 		B637A9BF2A7D26CA00C73812 /* RelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B637A9BE2A7D26CA00C73812 /* RelUITests.swift */; };
 		B637A9C12A7D26CA00C73812 /* RelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B637A9C02A7D26CA00C73812 /* RelUITestsLaunchTests.swift */; };
-		B6F71ABD2A7D3A07007EE493 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71ABC2A7D3A07007EE493 /* RealmHelper.swift */; };
+		B6E3493B2A7E83C200A3148D /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3493A2A7E83C200A3148D /* Print.swift */; };
+		B6F71ABD2A7D3A07007EE493 /* RealmAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71ABC2A7D3A07007EE493 /* RealmAccess.swift */; };
 		B6F71AC32A7D4869007EE493 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AC22A7D4869007EE493 /* Title.swift */; };
 		B6F71AC82A7D4AFF007EE493 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AC72A7D4AFF007EE493 /* Realm+.swift */; };
-		B6F71ACB2A7D55D9007EE493 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71ACA2A7D55D9007EE493 /* KeychainHelper.swift */; };
+		B6F71ACB2A7D55D9007EE493 /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71ACA2A7D55D9007EE493 /* KeychainAccess.swift */; };
 		B6F71ACD2A7D5905007EE493 /* KeychainPasswordAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71ACC2A7D5905007EE493 /* KeychainPasswordAttribute.swift */; };
 		B6F71AD32A7D61EB007EE493 /* ExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AD22A7D61EB007EE493 /* ExceptionHandler.m */; };
 		B6F71AD52A7D6224007EE493 /* ExceptionCatchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AD42A7D6224007EE493 /* ExceptionCatchable.swift */; };
@@ -60,10 +61,11 @@
 		B637A9BA2A7D26CA00C73812 /* RelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B637A9BE2A7D26CA00C73812 /* RelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelUITests.swift; sourceTree = "<group>"; };
 		B637A9C02A7D26CA00C73812 /* RelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B6F71ABC2A7D3A07007EE493 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		B6E3493A2A7E83C200A3148D /* Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
+		B6F71ABC2A7D3A07007EE493 /* RealmAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAccess.swift; sourceTree = "<group>"; };
 		B6F71AC22A7D4869007EE493 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		B6F71AC72A7D4AFF007EE493 /* Realm+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
-		B6F71ACA2A7D55D9007EE493 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		B6F71ACA2A7D55D9007EE493 /* KeychainAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
 		B6F71ACC2A7D5905007EE493 /* KeychainPasswordAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainPasswordAttribute.swift; sourceTree = "<group>"; };
 		B6F71AD02A7D61EB007EE493 /* Rel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rel-Bridging-Header.h"; sourceTree = "<group>"; };
 		B6F71AD12A7D61EB007EE493 /* ExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExceptionHandler.h; sourceTree = "<group>"; };
@@ -153,9 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				B6F71ACE2A7D61B6007EE493 /* App */,
+				B637A9A52A7D26C900C73812 /* ContentView.swift */,
 				B6F71ABE2A7D43F1007EE493 /* Domain */,
 				B6F71AB92A7D36A1007EE493 /* Infra */,
-				B637A9A52A7D26C900C73812 /* ContentView.swift */,
 			);
 			path = Rel;
 			sourceTree = "<group>";
@@ -185,6 +187,14 @@
 			path = RelUITests;
 			sourceTree = "<group>";
 		};
+		B6E349392A7E83B600A3148D /* Print */ = {
+			isa = PBXGroup;
+			children = (
+				B6E3493A2A7E83C200A3148D /* Print.swift */,
+			);
+			path = Print;
+			sourceTree = "<group>";
+		};
 		B6F71AB92A7D36A1007EE493 /* Infra */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,8 +216,8 @@
 		B6F71ABB2A7D39F0007EE493 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				B6F71ABC2A7D3A07007EE493 /* RealmHelper.swift */,
-				B6F71ACA2A7D55D9007EE493 /* KeychainHelper.swift */,
+				B6F71ACA2A7D55D9007EE493 /* KeychainAccess.swift */,
+				B6F71ABC2A7D3A07007EE493 /* RealmAccess.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -256,6 +266,7 @@
 		B6F71ACE2A7D61B6007EE493 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B6E349392A7E83B600A3148D /* Print */,
 				B637A9A72A7D26CA00C73812 /* Assets.xcassets */,
 				B6F71ACF2A7D61BF007EE493 /* ExceptionHandler */,
 				B637A9A92A7D26CA00C73812 /* Preview Content */,
@@ -268,9 +279,9 @@
 		B6F71ACF2A7D61BF007EE493 /* ExceptionHandler */ = {
 			isa = PBXGroup;
 			children = (
+				B6F71AD42A7D6224007EE493 /* ExceptionCatchable.swift */,
 				B6F71AD12A7D61EB007EE493 /* ExceptionHandler.h */,
 				B6F71AD22A7D61EB007EE493 /* ExceptionHandler.m */,
-				B6F71AD42A7D6224007EE493 /* ExceptionCatchable.swift */,
 			);
 			path = ExceptionHandler;
 			sourceTree = "<group>";
@@ -520,8 +531,9 @@
 				B6F71AD32A7D61EB007EE493 /* ExceptionHandler.m in Sources */,
 				B6F71AC32A7D4869007EE493 /* Title.swift in Sources */,
 				B637A9A62A7D26C900C73812 /* ContentView.swift in Sources */,
-				B6F71ABD2A7D3A07007EE493 /* RealmHelper.swift in Sources */,
-				B6F71ACB2A7D55D9007EE493 /* KeychainHelper.swift in Sources */,
+				B6F71ABD2A7D3A07007EE493 /* RealmAccess.swift in Sources */,
+				B6F71ACB2A7D55D9007EE493 /* KeychainAccess.swift in Sources */,
+				B6E3493B2A7E83C200A3148D /* Print.swift in Sources */,
 				B637A9A42A7D26C900C73812 /* RelApp.swift in Sources */,
 				B6F71AC82A7D4AFF007EE493 /* Realm+.swift in Sources */,
 			);

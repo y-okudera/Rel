@@ -11,34 +11,34 @@ import XCTest
 
 final class RelTests: XCTestCase {
 
-    var realmHelper: RealmHelper!
+    var realmAccess: RealmAccess!
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        realmHelper = RealmHelper(realm: .inMemory)
+        realmAccess = RealmAccess(realm: .inMemory)
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-        realmHelper = nil
+        realmAccess = nil
     }
 
     func testRealmHelpers() throws {
         let t = Title(id: 1, name: "test1", isOpened: true)
-        realmHelper.save(object: t) { error in
+        realmAccess.save(object: t) { error in
             XCTFail(error.localizedDescription)
         }
 
         let tt = Title(id: 2, name: "test2", isOpened: true)
-        realmHelper.save(object: tt) { error in
+        realmAccess.save(object: tt) { error in
             XCTFail(error.localizedDescription)
         }
 
-        let fetchResult = realmHelper.fetch(objectType: Title.self)
+        let fetchResult = realmAccess.fetch(objectType: Title.self)
         XCTAssertEqual(fetchResult.count, 2)
 
-        realmHelper.delete(object: t)
-        let refetchResult = realmHelper.fetch(objectType: Title.self)
+        realmAccess.delete(object: t)
+        let refetchResult = realmAccess.fetch(objectType: Title.self)
         XCTAssertEqual(refetchResult.count, 1)
     }
 
@@ -51,7 +51,7 @@ final class RelTests: XCTestCase {
         let data = Array(0..<count).map { Title(id: $0, name: "test", isOpened: false) }
 
         // Unmanaged objects -> Managed objects
-        realmHelper.update(objects: data) { error in
+        realmAccess.update(objects: data) { error in
             XCTFail(error.localizedDescription)
         }
 
@@ -63,7 +63,7 @@ final class RelTests: XCTestCase {
 
         for title in data {
             // Asynchronous execution of updates to Managed objects in other threads.
-            realmHelper.writeAsync(title) { realm, threadConfined in
+            realmAccess.writeAsync(title) { realm, threadConfined in
                 guard let object = threadConfined else {
                     return
                 }

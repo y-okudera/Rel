@@ -1,5 +1,5 @@
 //
-//  RealmHelper.swift
+//  RealmAccess.swift
 //  Rel
 //
 //  Created by Yuki Okudera on 2023/08/04.
@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-final class RealmHelper: ExceptionCatchable {
+final class RealmAccess: ExceptionCatchable {
     
     typealias ErrorHandler = ((Error) -> Void)
     

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum KeychainPasswordAttribute: String {
+enum KeychainPasswordAttribute {
     case realmEncryptionKey
 
     func service() -> String {

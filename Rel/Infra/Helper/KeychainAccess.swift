@@ -1,5 +1,5 @@
 //
-//  KeychainHelper.swift
+//  KeychainAccess.swift
 //  Rel
 //
 //  Created by Yuki Okudera on 2023/08/05.
@@ -7,17 +7,9 @@
 
 import Foundation
 
-final class KeychainHelper {
+enum KeychainAccess {
 
-    static let shared = KeychainHelper()
-    private init() {}
-
-    func save(string: String, passwordAttr: KeychainPasswordAttribute) -> Bool {
-        let data = Data(string.utf8)
-        return save(data, passwordAttr: passwordAttr)
-    }
-
-    func save(_ data: Data, passwordAttr: KeychainPasswordAttribute) -> Bool {
+    static func write(data: Data, passwordAttr: KeychainPasswordAttribute) -> Bool {
         let query = [
             kSecValueData: data,
             kSecClass: kSecClassGenericPassword,
@@ -36,21 +28,12 @@ final class KeychainHelper {
             SecItemUpdate(query, [kSecValueData as String: data] as CFDictionary)
             return true
         default:
-#if DEBUG
             print("Failed to save data to keychain")
-#endif
             return false
         }
     }
 
-    func readString(passwordAttr: KeychainPasswordAttribute) -> String? {
-        guard let data = read(passwordAttr: passwordAttr) else {
-            return nil
-        }
-        return String(data: data, encoding: .utf8)
-    }
-
-    func read(passwordAttr: KeychainPasswordAttribute) -> Data? {
+    static func read(passwordAttr: KeychainPasswordAttribute) -> Data? {
         let query = [
             kSecAttrService: passwordAttr.service(),
             kSecAttrAccount: passwordAttr.account(),
@@ -64,7 +47,7 @@ final class KeychainHelper {
         return result as? Data
     }
 
-    func delete(passwordAttr: KeychainPasswordAttribute) -> Bool {
+    static func delete(passwordAttr: KeychainPasswordAttribute) -> Bool {
         let query = [
             kSecAttrService: passwordAttr.service(),
             kSecAttrAccount: passwordAttr.account(),
@@ -73,5 +56,20 @@ final class KeychainHelper {
 
         let status = SecItemDelete(query)
         return status == noErr
+    }
+}
+
+extension KeychainAccess {
+
+    static func write(string: String, passwordAttr: KeychainPasswordAttribute) -> Bool {
+        let data = Data(string.utf8)
+        return write(data: data, passwordAttr: passwordAttr)
+    }
+
+    static func readStringValue(passwordAttr: KeychainPasswordAttribute) -> String? {
+        guard let data = read(passwordAttr: passwordAttr) else {
+            return nil
+        }
+        return String(data: data, encoding: .utf8)
     }
 }
