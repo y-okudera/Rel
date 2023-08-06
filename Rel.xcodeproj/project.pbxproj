@@ -26,7 +26,6 @@
 		B6E349462A7E8C1900A3148D /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3493A2A7E83C200A3148D /* Print.swift */; };
 		B6E349472A7E8C1900A3148D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B637A9A32A7D26C900C73812 /* App.swift */; };
 		B6E349482A7E8C1900A3148D /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AC72A7D4AFF007EE493 /* Realm+.swift */; };
-		B6E3494C2A7E8C1900A3148D /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = B6F71AD62A7D6826007EE493 /* .gitkeep */; };
 		B6E3494D2A7E8C1900A3148D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B637A9AA2A7D26CA00C73812 /* Preview Assets.xcassets */; };
 		B6E3494E2A7E8C1900A3148D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B637A9A72A7D26CA00C73812 /* Assets.xcassets */; };
 		B6E349572A7E8C5F00A3148D /* ExceptionCatchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AD42A7D6224007EE493 /* ExceptionCatchable.swift */; };
@@ -39,7 +38,6 @@
 		B6E3495E2A7E8C5F00A3148D /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3493A2A7E83C200A3148D /* Print.swift */; };
 		B6E3495F2A7E8C5F00A3148D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B637A9A32A7D26C900C73812 /* App.swift */; };
 		B6E349602A7E8C5F00A3148D /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AC72A7D4AFF007EE493 /* Realm+.swift */; };
-		B6E349642A7E8C5F00A3148D /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = B6F71AD62A7D6826007EE493 /* .gitkeep */; };
 		B6E349652A7E8C5F00A3148D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B637A9AA2A7D26CA00C73812 /* Preview Assets.xcassets */; };
 		B6E349662A7E8C5F00A3148D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B637A9A72A7D26CA00C73812 /* Assets.xcassets */; };
 		B6E3498F2A7E8D8D00A3148D /* Rel_devTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3498E2A7E8D8D00A3148D /* Rel_devTests.swift */; };
@@ -49,6 +47,30 @@
 		B6E349A02A7EAC7B00A3148D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3499F2A7EAC7B00A3148D /* AppDelegate.swift */; };
 		B6E349A12A7EACDE00A3148D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3499F2A7EAC7B00A3148D /* AppDelegate.swift */; };
 		B6E349A22A7EACDF00A3148D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3499F2A7EAC7B00A3148D /* AppDelegate.swift */; };
+		B6F3656C2A7F436700F3E074 /* titles.json in Resources */ = {isa = PBXBuildFile; fileRef = B6F365682A7F371100F3E074 /* titles.json */; };
+		B6F3656E2A7F439600F3E074 /* JSONFileDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3656A2A7F3F8500F3E074 /* JSONFileDecoder.swift */; };
+		B6F3656F2A7F439A00F3E074 /* JSONFileDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3656A2A7F3F8500F3E074 /* JSONFileDecoder.swift */; };
+		B6F365702A7F439E00F3E074 /* titles.json in Resources */ = {isa = PBXBuildFile; fileRef = B6F365682A7F371100F3E074 /* titles.json */; };
+		B6F365712A7F471200F3E074 /* JSONFileDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3656A2A7F3F8500F3E074 /* JSONFileDecoder.swift */; };
+		B6F365722A7F471900F3E074 /* titles.json in Resources */ = {isa = PBXBuildFile; fileRef = B6F365682A7F371100F3E074 /* titles.json */; };
+		B6F365742A7F4A9500F3E074 /* TitleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365732A7F4A9500F3E074 /* TitleRepository.swift */; };
+		B6F365762A7F4CF700F3E074 /* TitleFilterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365752A7F4CF700F3E074 /* TitleFilterInput.swift */; };
+		B6F365782A7F5E6700F3E074 /* NSPredicate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365772A7F5E6700F3E074 /* NSPredicate+.swift */; };
+		B6F3657B2A7F6F7D00F3E074 /* TitleFilterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365752A7F4CF700F3E074 /* TitleFilterInput.swift */; };
+		B6F3657C2A7F6F7E00F3E074 /* TitleFilterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365752A7F4CF700F3E074 /* TitleFilterInput.swift */; };
+		B6F3657D2A7F6F8100F3E074 /* NSPredicate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365772A7F5E6700F3E074 /* NSPredicate+.swift */; };
+		B6F3657E2A7F6F8100F3E074 /* NSPredicate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365772A7F5E6700F3E074 /* NSPredicate+.swift */; };
+		B6F365812A7F6F8D00F3E074 /* TitleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365732A7F4A9500F3E074 /* TitleRepository.swift */; };
+		B6F365822A7F6F8D00F3E074 /* TitleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365732A7F4A9500F3E074 /* TitleRepository.swift */; };
+		B6F365852A7F8EC800F3E074 /* StringFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365842A7F8EC800F3E074 /* StringFilter.swift */; };
+		B6F365872A7F8F2200F3E074 /* IntFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365862A7F8F2200F3E074 /* IntFilter.swift */; };
+		B6F365892A7F8F4200F3E074 /* BoolFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365882A7F8F4200F3E074 /* BoolFilter.swift */; };
+		B6F3658A2A7F8F6300F3E074 /* StringFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365842A7F8EC800F3E074 /* StringFilter.swift */; };
+		B6F3658B2A7F8F6400F3E074 /* StringFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365842A7F8EC800F3E074 /* StringFilter.swift */; };
+		B6F3658C2A7F8F6B00F3E074 /* IntFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365862A7F8F2200F3E074 /* IntFilter.swift */; };
+		B6F3658D2A7F8F6B00F3E074 /* IntFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365862A7F8F2200F3E074 /* IntFilter.swift */; };
+		B6F3658E2A7F8F7300F3E074 /* BoolFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365882A7F8F4200F3E074 /* BoolFilter.swift */; };
+		B6F3658F2A7F8F7400F3E074 /* BoolFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365882A7F8F4200F3E074 /* BoolFilter.swift */; };
 		B6F71ABD2A7D3A07007EE493 /* RealmAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71ABC2A7D3A07007EE493 /* RealmAccess.swift */; };
 		B6F71AC32A7D4869007EE493 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AC22A7D4869007EE493 /* Title.swift */; };
 		B6F71AC82A7D4AFF007EE493 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AC72A7D4AFF007EE493 /* Realm+.swift */; };
@@ -56,7 +78,6 @@
 		B6F71ACD2A7D5905007EE493 /* KeychainPasswordAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71ACC2A7D5905007EE493 /* KeychainPasswordAttribute.swift */; };
 		B6F71AD32A7D61EB007EE493 /* ExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AD22A7D61EB007EE493 /* ExceptionHandler.m */; };
 		B6F71AD52A7D6224007EE493 /* ExceptionCatchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AD42A7D6224007EE493 /* ExceptionCatchable.swift */; };
-		B6F71AD72A7D6826007EE493 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = B6F71AD62A7D6826007EE493 /* .gitkeep */; };
 		F80E112144684BACE5F7D012 /* Pods_Rel_dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5889CCC89E0F296E1AAF2578 /* Pods_Rel_dev.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +118,14 @@
 		B6E3499B2A7E917A00A3148D /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		B6E3499D2A7E918200A3148D /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		B6E3499F2A7EAC7B00A3148D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B6F365682A7F371100F3E074 /* titles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = titles.json; sourceTree = "<group>"; };
+		B6F3656A2A7F3F8500F3E074 /* JSONFileDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileDecoder.swift; sourceTree = "<group>"; };
+		B6F365732A7F4A9500F3E074 /* TitleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleRepository.swift; sourceTree = "<group>"; };
+		B6F365752A7F4CF700F3E074 /* TitleFilterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleFilterInput.swift; sourceTree = "<group>"; };
+		B6F365772A7F5E6700F3E074 /* NSPredicate+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+.swift"; sourceTree = "<group>"; };
+		B6F365842A7F8EC800F3E074 /* StringFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFilter.swift; sourceTree = "<group>"; };
+		B6F365862A7F8F2200F3E074 /* IntFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntFilter.swift; sourceTree = "<group>"; };
+		B6F365882A7F8F4200F3E074 /* BoolFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolFilter.swift; sourceTree = "<group>"; };
 		B6F71ABC2A7D3A07007EE493 /* RealmAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAccess.swift; sourceTree = "<group>"; };
 		B6F71AC22A7D4869007EE493 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		B6F71AC72A7D4AFF007EE493 /* Realm+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
@@ -106,7 +135,6 @@
 		B6F71AD12A7D61EB007EE493 /* ExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExceptionHandler.h; sourceTree = "<group>"; };
 		B6F71AD22A7D61EB007EE493 /* ExceptionHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExceptionHandler.m; sourceTree = "<group>"; };
 		B6F71AD42A7D6224007EE493 /* ExceptionCatchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExceptionCatchable.swift; sourceTree = "<group>"; };
-		B6F71AD62A7D6826007EE493 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		B9CE8BFC5C9F8CF308440212 /* Pods-RelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelTests.release.xcconfig"; path = "Target Support Files/Pods-RelTests/Pods-RelTests.release.xcconfig"; sourceTree = "<group>"; };
 		D2C6CAE939781DD0741C3DAE /* Pods-Rel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rel.release.xcconfig"; path = "Target Support Files/Pods-Rel/Pods-Rel.release.xcconfig"; sourceTree = "<group>"; };
 		D3F29705B729B1A92195DA48 /* Pods_Rel_devTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rel_devTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +241,7 @@
 				B637A9A52A7D26C900C73812 /* ContentView.swift */,
 				B6F71ABE2A7D43F1007EE493 /* Domain */,
 				B6F71AB92A7D36A1007EE493 /* Infra */,
+				B6F365672A7F370300F3E074 /* Stub */,
 			);
 			path = Rel;
 			sourceTree = "<group>";
@@ -275,22 +304,40 @@
 			path = development;
 			sourceTree = "<group>";
 		};
+		B6F365672A7F370300F3E074 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				B6F365682A7F371100F3E074 /* titles.json */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
+		B6F365832A7F8E4800F3E074 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				B6F365882A7F8F4200F3E074 /* BoolFilter.swift */,
+				B6F365862A7F8F2200F3E074 /* IntFilter.swift */,
+				B6F365842A7F8EC800F3E074 /* StringFilter.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
 		B6F71AB92A7D36A1007EE493 /* Infra */ = {
 			isa = PBXGroup;
 			children = (
 				B6F71AC62A7D4AE9007EE493 /* Extension */,
 				B6F71ABB2A7D39F0007EE493 /* Helper */,
-				B6F71ABA2A7D36C0007EE493 /* Repository */,
+				B6F71ABA2A7D36C0007EE493 /* DataStore */,
 			);
 			path = Infra;
 			sourceTree = "<group>";
 		};
-		B6F71ABA2A7D36C0007EE493 /* Repository */ = {
+		B6F71ABA2A7D36C0007EE493 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
-				B6F71AD62A7D6826007EE493 /* .gitkeep */,
+				B6F365732A7F4A9500F3E074 /* TitleRepository.swift */,
 			);
-			path = Repository;
+			path = DataStore;
 			sourceTree = "<group>";
 		};
 		B6F71ABB2A7D39F0007EE493 /* Helper */ = {
@@ -298,6 +345,7 @@
 			children = (
 				B6F71ACA2A7D55D9007EE493 /* KeychainAccess.swift */,
 				B6F71ABC2A7D3A07007EE493 /* RealmAccess.swift */,
+				B6F3656A2A7F3F8500F3E074 /* JSONFileDecoder.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -322,7 +370,9 @@
 		B6F71AC02A7D4843007EE493 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				B6F365832A7F8E4800F3E074 /* Filter */,
 				B6F71AC22A7D4869007EE493 /* Title.swift */,
+				B6F365752A7F4CF700F3E074 /* TitleFilterInput.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -330,6 +380,7 @@
 		B6F71AC62A7D4AE9007EE493 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B6F365772A7F5E6700F3E074 /* NSPredicate+.swift */,
 				B6F71AC72A7D4AFF007EE493 /* Realm+.swift */,
 			);
 			path = Extension;
@@ -493,7 +544,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6F71AD72A7D6826007EE493 /* .gitkeep in Resources */,
+				B6F365722A7F471900F3E074 /* titles.json in Resources */,
 				B637A9AB2A7D26CA00C73812 /* Preview Assets.xcassets in Resources */,
 				B637A9A82A7D26CA00C73812 /* Assets.xcassets in Resources */,
 			);
@@ -503,7 +554,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6E3494C2A7E8C1900A3148D /* .gitkeep in Resources */,
+				B6F3656C2A7F436700F3E074 /* titles.json in Resources */,
 				B6E3494D2A7E8C1900A3148D /* Preview Assets.xcassets in Resources */,
 				B6E3494E2A7E8C1900A3148D /* Assets.xcassets in Resources */,
 			);
@@ -513,7 +564,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6E349642A7E8C5F00A3148D /* .gitkeep in Resources */,
+				B6F365702A7F439E00F3E074 /* titles.json in Resources */,
 				B6E349652A7E8C5F00A3148D /* Preview Assets.xcassets in Resources */,
 				B6E349662A7E8C5F00A3148D /* Assets.xcassets in Resources */,
 			);
@@ -678,13 +729,20 @@
 				B6E349A02A7EAC7B00A3148D /* AppDelegate.swift in Sources */,
 				B6F71AD52A7D6224007EE493 /* ExceptionCatchable.swift in Sources */,
 				B6F71ACD2A7D5905007EE493 /* KeychainPasswordAttribute.swift in Sources */,
+				B6F365712A7F471200F3E074 /* JSONFileDecoder.swift in Sources */,
 				B6F71AD32A7D61EB007EE493 /* ExceptionHandler.m in Sources */,
+				B6F365872A7F8F2200F3E074 /* IntFilter.swift in Sources */,
 				B6F71AC32A7D4869007EE493 /* Title.swift in Sources */,
 				B637A9A62A7D26C900C73812 /* ContentView.swift in Sources */,
+				B6F365762A7F4CF700F3E074 /* TitleFilterInput.swift in Sources */,
 				B6F71ABD2A7D3A07007EE493 /* RealmAccess.swift in Sources */,
+				B6F365742A7F4A9500F3E074 /* TitleRepository.swift in Sources */,
+				B6F365782A7F5E6700F3E074 /* NSPredicate+.swift in Sources */,
 				B6F71ACB2A7D55D9007EE493 /* KeychainAccess.swift in Sources */,
 				B6E3499E2A7E918200A3148D /* Environment.swift in Sources */,
 				B6E3493B2A7E83C200A3148D /* Print.swift in Sources */,
+				B6F365852A7F8EC800F3E074 /* StringFilter.swift in Sources */,
+				B6F365892A7F8F4200F3E074 /* BoolFilter.swift in Sources */,
 				B637A9A42A7D26C900C73812 /* App.swift in Sources */,
 				B6F71AC82A7D4AFF007EE493 /* Realm+.swift in Sources */,
 			);
@@ -695,15 +753,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E349A22A7EACDF00A3148D /* AppDelegate.swift in Sources */,
+				B6F3657E2A7F6F8100F3E074 /* NSPredicate+.swift in Sources */,
 				B6E3493F2A7E8C1900A3148D /* ExceptionCatchable.swift in Sources */,
 				B6E349402A7E8C1900A3148D /* KeychainPasswordAttribute.swift in Sources */,
+				B6F3656E2A7F439600F3E074 /* JSONFileDecoder.swift in Sources */,
+				B6F3658D2A7F8F6B00F3E074 /* IntFilter.swift in Sources */,
 				B6E349412A7E8C1900A3148D /* ExceptionHandler.m in Sources */,
+				B6F3657C2A7F6F7E00F3E074 /* TitleFilterInput.swift in Sources */,
 				B6E349422A7E8C1900A3148D /* Title.swift in Sources */,
 				B6E349432A7E8C1900A3148D /* ContentView.swift in Sources */,
 				B6E349442A7E8C1900A3148D /* RealmAccess.swift in Sources */,
 				B6E349452A7E8C1900A3148D /* KeychainAccess.swift in Sources */,
+				B6F365822A7F6F8D00F3E074 /* TitleRepository.swift in Sources */,
 				B6E3499A2A7E917000A3148D /* Environment.swift in Sources */,
+				B6F3658B2A7F8F6400F3E074 /* StringFilter.swift in Sources */,
 				B6E349462A7E8C1900A3148D /* Print.swift in Sources */,
+				B6F3658F2A7F8F7400F3E074 /* BoolFilter.swift in Sources */,
 				B6E349472A7E8C1900A3148D /* App.swift in Sources */,
 				B6E349482A7E8C1900A3148D /* Realm+.swift in Sources */,
 			);
@@ -714,15 +779,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E349A12A7EACDE00A3148D /* AppDelegate.swift in Sources */,
+				B6F3657D2A7F6F8100F3E074 /* NSPredicate+.swift in Sources */,
 				B6E349572A7E8C5F00A3148D /* ExceptionCatchable.swift in Sources */,
 				B6E349582A7E8C5F00A3148D /* KeychainPasswordAttribute.swift in Sources */,
+				B6F3656F2A7F439A00F3E074 /* JSONFileDecoder.swift in Sources */,
+				B6F3658C2A7F8F6B00F3E074 /* IntFilter.swift in Sources */,
 				B6E349592A7E8C5F00A3148D /* ExceptionHandler.m in Sources */,
+				B6F3657B2A7F6F7D00F3E074 /* TitleFilterInput.swift in Sources */,
 				B6E3495A2A7E8C5F00A3148D /* Title.swift in Sources */,
 				B6E3495B2A7E8C5F00A3148D /* ContentView.swift in Sources */,
 				B6E3495C2A7E8C5F00A3148D /* RealmAccess.swift in Sources */,
 				B6E3495D2A7E8C5F00A3148D /* KeychainAccess.swift in Sources */,
+				B6F365812A7F6F8D00F3E074 /* TitleRepository.swift in Sources */,
 				B6E3499C2A7E917A00A3148D /* Environment.swift in Sources */,
+				B6F3658A2A7F8F6300F3E074 /* StringFilter.swift in Sources */,
 				B6E3495E2A7E8C5F00A3148D /* Print.swift in Sources */,
+				B6F3658E2A7F8F7300F3E074 /* BoolFilter.swift in Sources */,
 				B6E3495F2A7E8C5F00A3148D /* App.swift in Sources */,
 				B6E349602A7E8C5F00A3148D /* Realm+.swift in Sources */,
 			);

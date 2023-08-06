@@ -23,21 +23,21 @@ final class Rel_devTests: XCTestCase {
     }
 
     func testRealmHelpers() throws {
-        let t = Title(id: 1, name: "test1", isOpened: true)
-        realmAccess.save(object: t) { error in
+        let t1 = Title(id: 0, name: "name", author: "author", genre: "genre", publishedYear: 2000, volumes: 30, isOpened: false)
+        realmAccess.save(object: t1) { error in
             XCTFail(error.localizedDescription)
         }
 
-        let tt = Title(id: 2, name: "test2", isOpened: true)
-        realmAccess.save(object: tt) { error in
+        let t2 = Title(id: 1, name: "name", author: "author", genre: "genre", publishedYear: 2000, volumes: 30, isOpened: false)
+        realmAccess.save(object: t2) { error in
             XCTFail(error.localizedDescription)
         }
 
-        let fetchResult = realmAccess.fetch(objectType: Title.self)
+        let fetchResult = realmAccess.find(objectType: Title.self)
         XCTAssertEqual(fetchResult.count, 2)
 
-        realmAccess.delete(object: t)
-        let refetchResult = realmAccess.fetch(objectType: Title.self)
+        realmAccess.delete(object: t1)
+        let refetchResult = realmAccess.find(objectType: Title.self)
         XCTAssertEqual(refetchResult.count, 1)
     }
 
@@ -47,7 +47,7 @@ final class Rel_devTests: XCTestCase {
         exp.expectedFulfillmentCount = count
 
         // Unmanaged objects
-        let data = Array(0..<count).map { Title(id: $0, name: "test", isOpened: false) }
+        let data = Array(0..<count).map { Title(id: $0, name: "name", author: "author", genre: "genre", publishedYear: 2000, volumes: 30, isOpened: false) }
 
         // Unmanaged objects -> Managed objects
         realmAccess.update(objects: data) { error in

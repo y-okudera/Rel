@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "name": "長いマンガタイトル長いマンガタイトル長いマンガタイトル1",
+        "author": "長い作家名長い作家名長い作家名長い作家名長い作家名長い作家名",
+        "genre": "アクション、冒険、ファンタジー",
+        "published_year": 1999,
+        "volumes": 72,
+        "is_opened": true
+    },
+    {
+        "id": 2,
+        "name": "長いマンガタイトル長いマンガタイトル長いマンガタイトル2",
+        "author": "長い作家名長い作家名長い作家名長い作家名長い作家名長い作家名",
+        "genre": "アクション、冒険",
+        "published_year": 1997,
+        "volumes": 100,
+        "is_opened": false
+    },
+    {
+        "id": 3,
+        "name": "マンガタイトル3",
+        "author": "作家3",
+        "genre": "アクション、ホラー、ファンタジー",
+        "published_year": 2009,
+        "volumes": 34,
+        "is_opened": true
+    },
+    {
+        "id": 4,
+        "name": "マンガタイトル4",
+        "author": "作家4",
+        "genre": "アクション、ファンタジー",
+        "published_year": 2016,
+        "volumes": 23,
+        "is_opened": false
+    },
+    {
+        "id": 5,
+        "name": "マンガタイトル5",
+        "author": "作家5",
+        "genre": "アクション、冒険、スーパーヒーロー",
+        "published_year": 2014,
+        "volumes": 31,
+        "is_opened": true
+    },
+    {
+        "id": 6,
+        "name": "マンガタイトル6",
+        "author": "作家6",
+        "genre": "恋愛、ファンタジー",
+        "published_year": 2000,
+        "volumes": 10,
+        "is_opened": false
+    },
+    {
+        "id": 7,
+        "name": "マンガタイトル7",
+        "author": "作家7",
+        "genre": "ホラー、ファンタジー",
+        "published_year": 2001,
+        "volumes": 20,
+        "is_opened": true
+    },
+    {
+        "id": 8,
+        "name": "マンガタイトル8",
+        "author": "作家8",
+        "genre": "ジャンル8",
+        "published_year": 2002,
+        "volumes": 30,
+        "is_opened": false
+    },
+    {
+        "id": 9,
+        "name": "マンガタイトル9",
+        "author": "作家9",
+        "genre": "ジャンル9",
+        "published_year": 2003,
+        "volumes": 40,
+        "is_opened": true
+    },
+    {
+        "id": 10,
+        "name": "マンガタイトル10",
+        "author": "作家10",
+        "genre": "ジャンル10",
+        "published_year": 2004,
+        "volumes": 50,
+        "is_opened": false
+    },
+    {
+        "id": 11,
+        "name": "マンガタイトル11",
+        "author": "作家11",
+        "genre": "ジャンル11",
+        "published_year": 2005,
+        "volumes": 60,
+        "is_opened": true
+    },
+    {
+        "id": 12,
+        "name": "マンガタイトル12",
+        "author": "作家12",
+        "genre": "ジャンル12",
+        "published_year": 2006,
+        "volumes": 70,
+        "is_opened": false
+    },
+    {
+        "id": 13,
+        "name": "マンガタイトル13",
+        "author": "作家13",
+        "genre": "ジャンル13",
+        "published_year": 2007,
+        "volumes": 80,
+        "is_opened": true
+    },
+    {
+        "id": 14,
+        "name": "マンガタイトル14",
+        "author": "作家14",
+        "genre": "ジャンル14",
+        "published_year": 2008,
+        "volumes": 90,
+        "is_opened": false
+    },
+    {
+        "id": 15,
+        "name": "マンガタイトル15",
+        "author": "作家15",
+        "genre": "ジャンル15",
+        "published_year": 2009,
+        "volumes": 100,
+        "is_opened": true
+    },
+    {
+        "id": 16,
+        "name": "マンガタイトル16",
+        "author": "作家16",
+        "genre": "ジャンル16",
+        "published_year": 2010,
+        "volumes": 110,
+        "is_opened": false
+    },
+    {
+        "id": 17,
+        "name": "マンガタイトル17",
+        "author": "作家17",
+        "genre": "ジャンル17",
+        "published_year": 2011,
+        "volumes": 120,
+        "is_opened": true
+    },
+    {
+        "id": 18,
+        "name": "マンガタイトル18",
+        "author": "作家18",
+        "genre": "ジャンル18",
+        "published_year": 2012,
+        "volumes": 130,
+        "is_opened": false
+    },
+    {
+        "id": 19,
+        "name": "マンガタイトル19",
+        "author": "作家19",
+        "genre": "ジャンル19",
+        "published_year": 2013,
+        "volumes": 140,
+        "is_opened": true
+    },
+    {
+        "id": 20,
+        "name": "マンガタイトル20",
+        "author": "作家20",
+        "genre": "ジャンル20",
+        "published_year": 2014,
+        "volumes": 150,
+        "is_opened": false
+    }
+]
