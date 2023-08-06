@@ -7,8 +7,14 @@
 
 import Foundation
 
-func print(_ items: Any..., separator: String = " ", terminator: String = "\n") {
+func print(_ items: Any...) {
 #if DEBUG
-    Swift.print(items, separator: separator, terminator: terminator)
+    Swift.print(items, separator: " ", terminator: "\n")
+#endif
+}
+
+func dump<T>(_ value: T, name: String? = nil) {
+#if DEBUG
+    _ = Swift.dump(value, name: name)
 #endif
 }

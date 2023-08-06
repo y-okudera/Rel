@@ -14,7 +14,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
         print("HomeDirectory", NSHomeDirectory())
-        dump(KeychainAccess.getAllKeyChainItemsOfClass())
+        dump(KeychainAccess.getAllKeyChainItemsOfClass(), name: "AllKeyChainItems")
 
         return true
     }
