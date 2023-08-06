@@ -25,22 +25,22 @@ final class RealmAccess: ExceptionCatchable {
     /// - Returns: 取得結果
     func find<T: Object>(objectType: T.Type, predicate: NSPredicate? = nil) -> Results<T> {
         if let predicate {
-            return realm.objects(objectType).filter(predicate)
+            return realm.objects(objectType).filter(predicate).freeze()
         } else {
-            return realm.objects(objectType)
+            return realm.objects(objectType).freeze()
         }
     }
     
     /// 指定されたオブジェクトをデータベースに書き込みます。
     /// クロージャパラメータとしてカスタムエラー処理が利用可能（デフォルトはreturn）
-    func save<T: Object>(
+    func create<T: Object>(
         object: T,
         _ errorHandler: @escaping ErrorHandler = { _ in return }
     ) {
         do {
             try realm.write {
                 try execute {
-                    realm.add(object)
+                    realm.create(T.self, value: object)
                 }
             }
         }
@@ -51,7 +51,7 @@ final class RealmAccess: ExceptionCatchable {
 
     /// 指定されたオブジェクトをデータベースに書き込みます。
     /// クロージャパラメータとしてカスタムエラー処理が利用可能（デフォルトはreturn）
-    func save<T: Object>(
+    func create<T: Object>(
         objects: [T],
         _ errorHandler: @escaping ErrorHandler = { _ in return }
     ) {
@@ -59,7 +59,7 @@ final class RealmAccess: ExceptionCatchable {
             try realm.write {
                 try execute {
                     objects.forEach {
-                        realm.add($0)
+                        realm.create(T.self, value: $0)
                     }
                 }
             }
@@ -110,9 +110,13 @@ final class RealmAccess: ExceptionCatchable {
     /// オブジェクトがデータベースに存在する場合、指定されたオブジェクトを削除します。
     /// クロージャパラメータとしてカスタムエラー処理が利用可能（デフォルトはreturn）
     func delete<T: Object>(
-        object: T,
+        objectType: T.Type,
+        primaryKey: Any,
         errorHandler: @escaping ErrorHandler = { _ in return }
     ) {
+        guard let object = realm.object(ofType: objectType, forPrimaryKey: primaryKey) else {
+            return
+        }
         do {
             try realm.write {
                 try execute {
@@ -151,8 +155,17 @@ final class RealmAccess: ExceptionCatchable {
         objectType: T.Type,
         errorHandler: @escaping ErrorHandler = { _ in return }
     ) {
-        let allObjects = self.find(objectType: objectType)
-        self.delete(objects: Array(allObjects), errorHandler: errorHandler)
+        let allObjects = realm.objects(objectType)
+        do {
+            try realm.write {
+                try execute {
+                    realm.delete(allObjects)
+                }
+            }
+        }
+        catch {
+            errorHandler(error)
+        }
     }
     
     /// データベースからすべての既存のデータを削除します。これには、すべてのタイプのすべてのオブジェクトが含まれます。

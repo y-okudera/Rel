@@ -17,11 +17,11 @@ struct TitleRepository {
     }
 
     func create(title: Title) {
-        self.realmAccess.save(object: title)
+        self.realmAccess.create(object: title)
     }
 
     func create(titles: [Title]) {
-        self.realmAccess.save(objects: titles)
+        self.realmAccess.create(objects: titles)
     }
 
     func find(filter: TitleFilterInput?) -> [Title] {
@@ -47,7 +47,7 @@ struct TitleRepository {
         if let updatedAt = filter?.updatedAt {
             predicate = updatedAt.addPredicate(property: "updatedAt", to: predicate)
         }
-        print("prepre", predicate)
+        print("predicate", predicate)
         let result = self.realmAccess.find(objectType: Title.self, predicate: predicate)
         print("result", result.count)
         return Array(result)

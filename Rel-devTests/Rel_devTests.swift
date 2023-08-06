@@ -24,19 +24,19 @@ final class Rel_devTests: XCTestCase {
 
     func testRealmHelpers() throws {
         let t1 = Title(id: 0, name: "name", author: "author", genre: "genre", publishedYear: 2000, volumes: 30, isOpened: false, createdAt: Date(), updatedAt: nil)
-        realmAccess.save(object: t1) { error in
+        realmAccess.create(object: t1) { error in
             XCTFail(error.localizedDescription)
         }
 
         let t2 = Title(id: 1, name: "name", author: "author", genre: "genre", publishedYear: 2000, volumes: 30, isOpened: false, createdAt: Date(), updatedAt: nil)
-        realmAccess.save(object: t2) { error in
+        realmAccess.create(object: t2) { error in
             XCTFail(error.localizedDescription)
         }
 
         let fetchResult = realmAccess.find(objectType: Title.self)
         XCTAssertEqual(fetchResult.count, 2)
 
-        realmAccess.delete(object: t1)
+        realmAccess.delete(objectType: Title.self, primaryKey: t1.id)
         let refetchResult = realmAccess.find(objectType: Title.self)
         XCTAssertEqual(refetchResult.count, 1)
     }

@@ -7,7 +7,7 @@
 
 import RealmSwift
 
-final class Title: Object, Decodable {
+final class Title: Object, Decodable, Identifiable {
     @Persisted(primaryKey: true) var id: Int
     @Persisted var name: String
     @Persisted var author: String
