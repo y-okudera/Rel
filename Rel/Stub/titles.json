@@ -6,7 +6,8 @@
         "genre": "アクション、冒険、ファンタジー",
         "published_year": 1999,
         "volumes": 72,
-        "is_opened": true
+        "is_opened": true,
+        "created_at": "2023-08-01T00:00:00+09:00"
     },
     {
         "id": 2,
@@ -15,7 +16,9 @@
         "genre": "アクション、冒険",
         "published_year": 1997,
         "volumes": 100,
-        "is_opened": false
+        "is_opened": false,
+        "created_at": "2023-07-31T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 3,
@@ -24,7 +27,9 @@
         "genre": "アクション、ホラー、ファンタジー",
         "published_year": 2009,
         "volumes": 34,
-        "is_opened": true
+        "is_opened": true,
+        "created_at": "2023-07-30T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 4,
@@ -33,7 +38,9 @@
         "genre": "アクション、ファンタジー",
         "published_year": 2016,
         "volumes": 23,
-        "is_opened": false
+        "is_opened": false,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 5,
@@ -42,7 +49,9 @@
         "genre": "アクション、冒険、スーパーヒーロー",
         "published_year": 2014,
         "volumes": 31,
-        "is_opened": true
+        "is_opened": true,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 6,
@@ -51,7 +60,9 @@
         "genre": "恋愛、ファンタジー",
         "published_year": 2000,
         "volumes": 10,
-        "is_opened": false
+        "is_opened": false,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 7,
@@ -60,7 +71,9 @@
         "genre": "ホラー、ファンタジー",
         "published_year": 2001,
         "volumes": 20,
-        "is_opened": true
+        "is_opened": true,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 8,
@@ -69,7 +82,9 @@
         "genre": "ジャンル8",
         "published_year": 2002,
         "volumes": 30,
-        "is_opened": false
+        "is_opened": false,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 9,
@@ -78,7 +93,9 @@
         "genre": "ジャンル9",
         "published_year": 2003,
         "volumes": 40,
-        "is_opened": true
+        "is_opened": true,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 10,
@@ -87,7 +104,9 @@
         "genre": "ジャンル10",
         "published_year": 2004,
         "volumes": 50,
-        "is_opened": false
+        "is_opened": false,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 11,
@@ -96,7 +115,9 @@
         "genre": "ジャンル11",
         "published_year": 2005,
         "volumes": 60,
-        "is_opened": true
+        "is_opened": true,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 12,
@@ -105,7 +126,9 @@
         "genre": "ジャンル12",
         "published_year": 2006,
         "volumes": 70,
-        "is_opened": false
+        "is_opened": false,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 13,
@@ -114,7 +137,9 @@
         "genre": "ジャンル13",
         "published_year": 2007,
         "volumes": 80,
-        "is_opened": true
+        "is_opened": true,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 14,
@@ -123,7 +148,9 @@
         "genre": "ジャンル14",
         "published_year": 2008,
         "volumes": 90,
-        "is_opened": false
+        "is_opened": false,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 15,
@@ -132,7 +159,9 @@
         "genre": "ジャンル15",
         "published_year": 2009,
         "volumes": 100,
-        "is_opened": true
+        "is_opened": true,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 16,
@@ -141,7 +170,9 @@
         "genre": "ジャンル16",
         "published_year": 2010,
         "volumes": 110,
-        "is_opened": false
+        "is_opened": false,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 17,
@@ -150,7 +181,9 @@
         "genre": "ジャンル17",
         "published_year": 2011,
         "volumes": 120,
-        "is_opened": true
+        "is_opened": true,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 18,
@@ -159,7 +192,9 @@
         "genre": "ジャンル18",
         "published_year": 2012,
         "volumes": 130,
-        "is_opened": false
+        "is_opened": false,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 19,
@@ -168,7 +203,9 @@
         "genre": "ジャンル19",
         "published_year": 2013,
         "volumes": 140,
-        "is_opened": true
+        "is_opened": true,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     },
     {
         "id": 20,
@@ -177,6 +214,8 @@
         "genre": "ジャンル20",
         "published_year": 2014,
         "volumes": 150,
-        "is_opened": false
+        "is_opened": false,
+        "created_at": "2023-08-01T00:00:00+09:00",
+        "updated_at": "2023-08-06T00:00:00+09:00"
     }
 ]

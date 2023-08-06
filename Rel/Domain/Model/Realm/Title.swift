@@ -15,8 +15,20 @@ final class Title: Object, Decodable {
     @Persisted var publishedYear: Int
     @Persisted var volumes: Int
     @Persisted var isOpened: Bool
+    @Persisted var createdAt: Date
+    @Persisted var updatedAt: Date?
 
-    convenience init(id: Int, name: String, author: String, genre: String, publishedYear: Int, volumes: Int, isOpened: Bool) {
+    convenience init(
+        id: Int,
+        name: String,
+        author: String,
+        genre: String,
+        publishedYear: Int,
+        volumes: Int,
+        isOpened: Bool,
+        createdAt: Date,
+        updatedAt: Date?
+    ) {
         self.init()
         self.id = id
         self.name = name
@@ -25,5 +37,7 @@ final class Title: Object, Decodable {
         self.publishedYear = publishedYear
         self.volumes = volumes
         self.isOpened = isOpened
+        self.createdAt = createdAt
+        self.updatedAt = updatedAt
     }
 }

@@ -23,12 +23,12 @@ final class Rel_devTests: XCTestCase {
     }
 
     func testRealmHelpers() throws {
-        let t1 = Title(id: 0, name: "name", author: "author", genre: "genre", publishedYear: 2000, volumes: 30, isOpened: false)
+        let t1 = Title(id: 0, name: "name", author: "author", genre: "genre", publishedYear: 2000, volumes: 30, isOpened: false, createdAt: Date(), updatedAt: nil)
         realmAccess.save(object: t1) { error in
             XCTFail(error.localizedDescription)
         }
 
-        let t2 = Title(id: 1, name: "name", author: "author", genre: "genre", publishedYear: 2000, volumes: 30, isOpened: false)
+        let t2 = Title(id: 1, name: "name", author: "author", genre: "genre", publishedYear: 2000, volumes: 30, isOpened: false, createdAt: Date(), updatedAt: nil)
         realmAccess.save(object: t2) { error in
             XCTFail(error.localizedDescription)
         }
@@ -47,7 +47,7 @@ final class Rel_devTests: XCTestCase {
         exp.expectedFulfillmentCount = count
 
         // Unmanaged objects
-        let data = Array(0..<count).map { Title(id: $0, name: "name", author: "author", genre: "genre", publishedYear: 2000, volumes: 30, isOpened: false) }
+        let data = Array(0..<count).map { Title(id: $0, name: "name", author: "author", genre: "genre", publishedYear: 2000, volumes: 30, isOpened: false, createdAt: Date(), updatedAt: nil) }
 
         // Unmanaged objects -> Managed objects
         realmAccess.update(objects: data) { error in

@@ -19,8 +19,19 @@ enum JSONFileDecoder {
         guard let json = readJSON(jsonFileName: jsonFileName, bundle: bundle) else {
             return nil
         }
+
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = .custom { decoder in
+            let container = try decoder.singleValueContainer()
+            let dateString = try container.decode(String.self)
+            let dateFormatter = ISO8601DateFormatter()
+            if let date = dateFormatter.date(from: dateString) {
+                return date
+            }
+            throw DecodingError.dataCorruptedError(in: container, debugDescription: "Cannot decode date string \(dateString)")
+        }
+
         do {
             return try decoder.decode(T.self, from: json)
         } catch {

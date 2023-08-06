@@ -71,6 +71,9 @@
 		B6F3658D2A7F8F6B00F3E074 /* IntFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365862A7F8F2200F3E074 /* IntFilter.swift */; };
 		B6F3658E2A7F8F7300F3E074 /* BoolFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365882A7F8F4200F3E074 /* BoolFilter.swift */; };
 		B6F3658F2A7F8F7400F3E074 /* BoolFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365882A7F8F4200F3E074 /* BoolFilter.swift */; };
+		B6F365912A7FC8F500F3E074 /* DateFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365902A7FC8F500F3E074 /* DateFilter.swift */; };
+		B6F365922A7FCC1E00F3E074 /* DateFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365902A7FC8F500F3E074 /* DateFilter.swift */; };
+		B6F365932A7FCC1F00F3E074 /* DateFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F365902A7FC8F500F3E074 /* DateFilter.swift */; };
 		B6F71ABD2A7D3A07007EE493 /* RealmAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71ABC2A7D3A07007EE493 /* RealmAccess.swift */; };
 		B6F71AC32A7D4869007EE493 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AC22A7D4869007EE493 /* Title.swift */; };
 		B6F71AC82A7D4AFF007EE493 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71AC72A7D4AFF007EE493 /* Realm+.swift */; };
@@ -126,6 +129,7 @@
 		B6F365842A7F8EC800F3E074 /* StringFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFilter.swift; sourceTree = "<group>"; };
 		B6F365862A7F8F2200F3E074 /* IntFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntFilter.swift; sourceTree = "<group>"; };
 		B6F365882A7F8F4200F3E074 /* BoolFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolFilter.swift; sourceTree = "<group>"; };
+		B6F365902A7FC8F500F3E074 /* DateFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilter.swift; sourceTree = "<group>"; };
 		B6F71ABC2A7D3A07007EE493 /* RealmAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAccess.swift; sourceTree = "<group>"; };
 		B6F71AC22A7D4869007EE493 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		B6F71AC72A7D4AFF007EE493 /* Realm+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
@@ -316,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				B6F365882A7F8F4200F3E074 /* BoolFilter.swift */,
+				B6F365902A7FC8F500F3E074 /* DateFilter.swift */,
 				B6F365862A7F8F2200F3E074 /* IntFilter.swift */,
 				B6F365842A7F8EC800F3E074 /* StringFilter.swift */,
 			);
@@ -737,6 +742,7 @@
 				B6F365762A7F4CF700F3E074 /* TitleFilterInput.swift in Sources */,
 				B6F71ABD2A7D3A07007EE493 /* RealmAccess.swift in Sources */,
 				B6F365742A7F4A9500F3E074 /* TitleRepository.swift in Sources */,
+				B6F365912A7FC8F500F3E074 /* DateFilter.swift in Sources */,
 				B6F365782A7F5E6700F3E074 /* NSPredicate+.swift in Sources */,
 				B6F71ACB2A7D55D9007EE493 /* KeychainAccess.swift in Sources */,
 				B6E3499E2A7E918200A3148D /* Environment.swift in Sources */,
@@ -763,6 +769,7 @@
 				B6E349422A7E8C1900A3148D /* Title.swift in Sources */,
 				B6E349432A7E8C1900A3148D /* ContentView.swift in Sources */,
 				B6E349442A7E8C1900A3148D /* RealmAccess.swift in Sources */,
+				B6F365922A7FCC1E00F3E074 /* DateFilter.swift in Sources */,
 				B6E349452A7E8C1900A3148D /* KeychainAccess.swift in Sources */,
 				B6F365822A7F6F8D00F3E074 /* TitleRepository.swift in Sources */,
 				B6E3499A2A7E917000A3148D /* Environment.swift in Sources */,
@@ -789,6 +796,7 @@
 				B6E3495A2A7E8C5F00A3148D /* Title.swift in Sources */,
 				B6E3495B2A7E8C5F00A3148D /* ContentView.swift in Sources */,
 				B6E3495C2A7E8C5F00A3148D /* RealmAccess.swift in Sources */,
+				B6F365932A7FCC1F00F3E074 /* DateFilter.swift in Sources */,
 				B6E3495D2A7E8C5F00A3148D /* KeychainAccess.swift in Sources */,
 				B6F365812A7F6F8D00F3E074 /* TitleRepository.swift in Sources */,
 				B6E3499C2A7E917A00A3148D /* Environment.swift in Sources */,

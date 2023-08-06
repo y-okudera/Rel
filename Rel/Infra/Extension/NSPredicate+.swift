@@ -9,6 +9,14 @@ import Foundation
 
 extension NSPredicate {
 
+    convenience init(isNil property: String) {
+        self.init(format: "\(property) = nil")
+    }
+
+    convenience init(isNotNil property: String) {
+        self.init(format: "\(property) != nil")
+    }
+
     convenience init(_ property: String, equal value: AnyObject) {
         self.init(format: "\(property) = %@", argumentArray: [value])
     }
@@ -77,13 +85,13 @@ extension NSPredicate {
     ///   - property: プロパティ名
     ///   - fromDate: DateのFrom「いつから」
     ///   - toDate: DateのTo「いつまで」
-    convenience init(_ property: String, fromDate: NSDate?, toDate: NSDate?) {
+    convenience init(_ property: String, fromDate: Date?, toDate: Date?) {
         var format = "", args = [AnyObject]()
-        if let fromDate {
+        if let fromDate = fromDate as? NSDate {
             format += "\(property) >= %@"
             args.append(fromDate)
         }
-        if let toDate {
+        if let toDate = toDate as? NSDate {
             if !format.isEmpty {
                 format += " AND "
             }

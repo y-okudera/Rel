@@ -15,6 +15,8 @@ struct TitleFilterInput {
     let publishedYear: IntFilter?
     let volumes: IntFilter?
     let isOpened: BoolFilter?
+    let createdAt: DateFilter?
+    let updatedAt: DateFilter?
 
     init(
         id: IntFilter? = nil,
@@ -23,7 +25,9 @@ struct TitleFilterInput {
         genre: StringFilter? = nil,
         publishedYear: IntFilter? = nil,
         volumes: IntFilter? = nil,
-        isOpened: BoolFilter? = nil
+        isOpened: BoolFilter? = nil,
+        createdAt: DateFilter? = nil,
+        updatedAt: DateFilter? = nil
     ) {
         self.id = id
         self.name = name
@@ -32,5 +36,7 @@ struct TitleFilterInput {
         self.publishedYear = publishedYear
         self.volumes = volumes
         self.isOpened = isOpened
+        self.createdAt = createdAt
+        self.updatedAt = updatedAt
     }
 }

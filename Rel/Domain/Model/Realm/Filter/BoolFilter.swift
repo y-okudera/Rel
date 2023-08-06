@@ -14,4 +14,12 @@ struct BoolFilter {
     init(equals: Bool? = nil) {
         self.equals = equals
     }
+
+    func addPredicate(property: String, to predicate: NSPredicate) -> NSPredicate {
+        var predicate = predicate
+        if let equals = self.equals {
+            predicate = predicate.and(predicate: .init(property, equal: equals as AnyObject))
+        }
+        return predicate
+    }
 }
