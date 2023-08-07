@@ -252,7 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				B6F71ACE2A7D61B6007EE493 /* App */,
-				B637A9A52A7D26C900C73812 /* ContentView.swift */,
 				B6F71ABE2A7D43F1007EE493 /* Domain */,
 				B6F71AB92A7D36A1007EE493 /* Infra */,
 				B6F365942A7FE13B00F3E074 /* Presentation */,
@@ -350,6 +349,7 @@
 		B6F365952A7FE14900F3E074 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				B637A9A52A7D26C900C73812 /* ContentView.swift */,
 				B6F365962A7FE15700F3E074 /* SettingView.swift */,
 				B6F365982A7FE17300F3E074 /* TitleListView.swift */,
 			);

@@ -106,7 +106,7 @@ struct SettingView: View {
 
                     Button("StubをDBに保存する") {
                         let titles = JSONFileDecoder.decode(to: [Title].self, jsonFileName: "titles.json", bundle: .main) ?? []
-                        titleRepository.update(titles: titles)
+                        titleRepository.updateList(titles: titles)
                         findTitles()
                     }
                 }

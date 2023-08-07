@@ -8,7 +8,24 @@
 import Foundation
 import RealmSwift
 
-struct TitleRepository {
+enum TitleRepositoryProvider {
+    static func provide() -> TitleRepository {
+        TitleDataStore(realmAccess: .init(realm: .encrypted))
+    }
+}
+
+protocol TitleRepository {
+    init(realmAccess: RealmAccess)
+    func createOne(title: Title)
+    func createList(titles: [Title])
+    func findOne(filter: TitleFilterInput?) -> Title?
+    func findList(filter: TitleFilterInput?) -> [Title]
+    func updateOne(title: Title)
+    func updateList(titles: [Title])
+    func deleteAllTitles()
+}
+
+struct TitleDataStore: TitleRepository {
 
     private let realmAccess: RealmAccess
 
@@ -16,15 +33,30 @@ struct TitleRepository {
         self.realmAccess = realmAccess
     }
 
-    func create(title: Title) {
+    func createOne(title: Title) {
         self.realmAccess.create(object: title)
     }
 
-    func create(titles: [Title]) {
+    func createList(titles: [Title]) {
         self.realmAccess.create(objects: titles)
     }
 
-    func find(filter: TitleFilterInput?) -> [Title] {
+    func findOne(filter: TitleFilterInput?) -> Title? {
+        var predicate = NSPredicate.empty
+        if let id = filter?.id {
+            if let equals = id.equals {
+                predicate = predicate.and(predicate: NSPredicate("id", equal: equals as AnyObject))
+            }
+        }
+
+        if let result = self.realmAccess.find(objectType: Title.self, predicate: predicate).first {
+            return Title(value: result)
+        } else {
+            return nil
+        }
+    }
+
+    func findList(filter: TitleFilterInput?) -> [Title] {
         var predicate = NSPredicate.empty
         if let name = filter?.name {
             predicate = name.addPredicate(property: "name", to: predicate)
@@ -53,26 +85,11 @@ struct TitleRepository {
         return Array(result)
     }
 
-    func findOne(filter: TitleFilterInput?) -> Title? {
-        var predicate = NSPredicate.empty
-        if let id = filter?.id {
-            if let equals = id.equals {
-                predicate = predicate.and(predicate: NSPredicate("id", equal: equals as AnyObject))
-            }
-        }
-
-        if let result = self.realmAccess.find(objectType: Title.self, predicate: predicate).first {
-            return Title(value: result)
-        } else {
-            return nil
-        }
-    }
-
-    func update(title: Title) {
+    func updateOne(title: Title) {
         self.realmAccess.update(object: title)
     }
 
-    func update(titles: [Title]) {
+    func updateList(titles: [Title]) {
         self.realmAccess.update(objects: titles)
     }
 

@@ -21,7 +21,7 @@ struct ContentView: View {
     @State private var lastUpdatedDateTo = Calendar.current.startOfDay(for: Date())
     @State private var isOpenedOnly: Bool = true
     @State private var filteredTitles: [Title] = []
-    private let titleRepository: TitleRepository = .init(realmAccess: .init(realm: .encrypted))
+    private let titleRepository: TitleRepository = TitleRepositoryProvider.provide()
     
     var body: some View {
         TabView {
@@ -80,7 +80,7 @@ struct ContentView: View {
     
     private func findTitles() {
         print("findTitles")
-        self.filteredTitles = self.titleRepository.find(
+        self.filteredTitles = self.titleRepository.findList(
             filter: .init(
                 name: self.titleName.isEmpty ? nil : .init(contains: self.titleName),
                 author: self.authorName.isEmpty ? nil : .init(contains: self.authorName),

@@ -42,6 +42,7 @@ extension Realm {
             let encryptionKey = generateRealmEncryptionKey()
             let writeResult = KeychainAccess.write(data: encryptionKey, passwordAttr: .realmEncryptionKey)
             print("Realm encryptionKeyをキーチェーンに保存: \(writeResult ? "成功" : "失敗")")
+            print("Realm encryptionKey -> " + encryptionKey.map { String(format: "%.2hhx", $0) }.joined())
             return encryptionKey
         }
     }()
