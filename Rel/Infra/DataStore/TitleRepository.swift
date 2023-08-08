@@ -58,28 +58,8 @@ struct TitleDataStore: TitleRepository {
 
     func findList(filter: TitleFilterInput?) -> [Title] {
         var predicate = NSPredicate.empty
-        if let name = filter?.name {
-            predicate = name.addPredicate(property: "name", to: predicate)
-        }
-        if let author = filter?.author {
-            predicate = author.addPredicate(property: "author", to: predicate)
-        }
-        if let genre = filter?.genre {
-            predicate = genre.addPredicate(property: "genre", to: predicate)
-        }
-        if let publishedYear = filter?.publishedYear {
-            predicate = publishedYear.addPredicate(property: "publishedYear", to: predicate)
-        }
-        if let isOpened = filter?.isOpened {
-            predicate = isOpened.addPredicate(property: "isOpened", to: predicate)
-        }
-        if let createdAt = filter?.createdAt {
-            predicate = createdAt.addPredicate(property: "createdAt", to: predicate)
-        }
-        if let updatedAt = filter?.updatedAt {
-            predicate = updatedAt.addPredicate(property: "updatedAt", to: predicate)
-        }
-        print("predicate", predicate)
+        predicate = filter?.addPredicate(to: NSPredicate.empty) ?? predicate
+        print("predicate ", predicate)
         let result = self.realmAccess.find(objectType: Title.self, predicate: predicate)
         print("result", result.count)
         return Array(result)

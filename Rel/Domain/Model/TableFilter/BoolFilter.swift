@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BoolFilter {
+struct BoolFilter: TableFilter {
     /// `nil`でない場合、指定値と等しいという条件で絞り込み
     let equals: Bool?
 

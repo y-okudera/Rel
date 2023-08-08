@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StringFilter {
+struct StringFilter: TableFilter {
     /// `nil`でない場合、指定文字列で始まるという条件で絞り込み
     let beginsWith: String?
 

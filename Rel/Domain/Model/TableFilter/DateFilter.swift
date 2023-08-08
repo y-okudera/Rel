@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DateFilter {
+struct DateFilter: TableFilter {
     /// `nil`でない場合、指定範囲内という条件で絞り込み
     let between: (min: Date, max: Date)?
 

@@ -39,4 +39,15 @@ struct TitleFilterInput {
         self.createdAt = createdAt
         self.updatedAt = updatedAt
     }
+
+    func addPredicate(to predicate: NSPredicate) -> NSPredicate {
+        var predicate = predicate
+        let mirror = Mirror(reflecting: self)
+        for child in mirror.children {
+            if let label = child.label, let value = child.value as? TableFilter {
+                predicate = value.addPredicate(property: label, to: predicate)
+            }
+        }
+        return predicate
+    }
 }
